@@ -1,0 +1,2 @@
+Employee{name='Jan', surname='Nowak', email='nowak@gmail.com', salary=10000.0}
+Employee{name='Alicja', surname='Kowalska', email='kowalska@gmail.com', salary=20000.0}
