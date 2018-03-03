@@ -6,6 +6,8 @@ import pl.sda.poznan.factory.writer.CompanyWriter;
 import pl.sda.poznan.factory.writer.TxtCompanyWriter;
 import pl.sda.poznan.factory.writer.XmlCompanyWriter;
 
+import java.util.Scanner;
+
 public class App {
 
     public static void main(String[] args) {
@@ -16,9 +18,20 @@ public class App {
         company.addEmployee(dyrektor);
         company.addEmployee(kierownik);
 
-        CompanyWriter writer = new XmlCompanyWriter("firma.xml");
-        writer.write(company);
+//        CompanyWriter writer = new XmlCompanyWriter("firma.xml");
+//        writer.write(company);
 
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Podaj nazwe pliku, do ktorego chcesz zapisac:");
+
+        String filename = scanner.next();
+        CompanyWriterFactory companyWriterFactory = new CompanyWriterFactory();
+        try {
+            CompanyWriter writer = companyWriterFactory.create(filename);
+            writer.write(company);
+        } catch (IllegalArgumentException ex) {
+            System.out.println(ex.getMessage());
+        }
 
     }
 }
