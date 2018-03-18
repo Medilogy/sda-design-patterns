@@ -23,6 +23,5 @@ public class WordCounter {
         for (Entry<String, Integer> entry : wordsMap.entrySet()) {
             System.out.println(entry.getKey() + "-------> " + entry.getValue());
         }
-
     }
 }

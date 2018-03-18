@@ -30,7 +30,7 @@ public class FileHelper {
         return lines;
     }
 
-    public static List<String> splitLinesIntoWords (List<String> lines){
+    public static List<String> splitLinesIntoWords(List<String> lines) {
 
         List<String> wordsResults = new ArrayList<>();
         for (String line : lines) {

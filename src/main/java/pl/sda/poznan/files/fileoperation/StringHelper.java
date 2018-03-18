@@ -6,7 +6,7 @@ import java.util.Map;
 
 public class StringHelper {
 
-    public static Map<String, Integer> getWordsMap (List<String> words) {
+    public static Map<String, Integer> getWordsMap(List<String> words) {
         Map<String, Integer> results = new HashMap<>();
         for (String word : words) {
             if (results.containsKey(word)) {
