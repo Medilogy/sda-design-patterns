@@ -36,5 +36,24 @@ public class Playground {
             String next = iterator.next();
             System.out.println("Pobrana watosc to: " + next);
         }
+
+        // z uzyciem wlasnego iteratora
+        MyCollection imiona = new MyCollection();
+        imiona.addElement("Lidia");
+        imiona.addElement("Agata");
+        imiona.addElement("Alicja");
+
+        pl.sda.poznan.iterator.Iterator<String> imionaIterator = imiona.getIterator();
+        while (imionaIterator.hasNextElement()){
+            String elem = imionaIterator.getNextElement();
+            System.out.println(elem);
+        }
+        MyIterableCollection collection = new MyIterableCollection();
+
+        for (String s : collection){
+
+        }
+
+
     }
 }

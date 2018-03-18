@@ -1,4 +1,6 @@
 package pl.sda.poznan.iterator;
 
-public interface Iterable {
+public interface Iterable <T> {
+
+    Iterator<T> getIterator();
 }
